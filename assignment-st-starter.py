@@ -19,7 +19,7 @@ st.write(df)
 # a sample diagram is shown below
 
 # 创建图形和三个子图
-plt.style.use('seaborn-v8_0')
+plt.style.use('seaborn-v0_8')
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
 # 绘制每个客舱等级的票价箱线图
@@ -29,7 +29,6 @@ for i, pclass in enumerate(sorted(df['Pclass'].unique())):
     axes[i].set_ylabel('Fare' if i == 0 else '')
 
 plt.tight_layout()
-plt.show()
 
 # 在 Streamlit 应用中显示图表
 st.pyplot(fig)
